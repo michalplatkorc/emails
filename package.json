@@ -1,0 +1,20 @@
+{
+  "name": "emails",
+  "version": "0.0.18",
+  "private": true,
+  "workspaces": [
+    ".react-email"
+  ],
+  "scripts": {
+    "dev": "email dev",
+    "export": "email export --pretty"
+  },
+  "dependencies": {
+    "@react-email/code-inline": "^0.0.1",
+    "@react-email/components": "^0.0.21",
+    "react-email": "^2.1.5"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}
