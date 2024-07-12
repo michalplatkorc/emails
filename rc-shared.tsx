@@ -94,6 +94,8 @@ export const subtitle2 = {
 }
 export const button = {
     backgroundColor: '#FE780F',
+    appearance: "none" as const,
+    border: 0,
     color: "white",
     width: "100%",
     borderRadius: 3,
@@ -144,9 +146,12 @@ export const footerLink = {
     textDecoration: "underline"
 }
 
-
 // unsub
-
+export const unsubButton = {
+    ...button,
+    height: 61,
+    cursor: "pointer"
+}
 export const unsubTitle = {
     ...subtitle,
     marginTop: 27,
@@ -166,12 +171,10 @@ export const unsubCaption = {
     marginBottom: 16,
 }
 
-// const radioGroupStyles = "flex items-center gap-[18px] mb-[18px]";
 export const radioGroup = {
     marginBottom: 18,
 }
 
-// const radioStyles = "mb-[18px] w-[18px] h-[18px] m-0 relative appearance-none outline outline-2 outline-white20 rounded-full";
 export const radio = {
     marginBottom: 18,
     width: 18,
@@ -190,7 +193,6 @@ export const radioLabel = {
     fontSize: 15,
     textAlign: "left" as const,
 }
-// style="bg-transparent border-2 border-white20 w-full h-[88px] font-main px-auto text-white resize-none box-border"
 export const textarea = {
     fontFamily: mainFontFamily,
     backgroundColor: "transparent",

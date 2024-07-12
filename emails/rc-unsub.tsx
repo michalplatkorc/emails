@@ -1,7 +1,8 @@
 import * as React from "react";
-import { Body, Button, Column, Container, Font, Head, Hr, Html, Img, Link, Preview, Row, Section, Tailwind, Text } from "@react-email/components";
-import { button, container, contentContainer, divider, footer, footerLink, footerSubTextSecondary, header, headerDivider, headerTitle, icon, main, subtitle, subtitle2, twConfig } from "../rc-shared";
+import { Body, Button, Column, Container, Font, Head, Html, Img, Preview, Row, Section, Text } from "@react-email/components";
+import { button, container, contentContainer, divider, header, headerDivider, headerTitle, icon, main, subtitle, subtitle2, unsubButton } from "../rc-shared";
 import OutlookConditional from "../custom/OutlookConditional";
+import OutlookHidden from "../custom/OutlookHide";
 
 export const Unsub = () => (
     <Html lang='en' dir='ltr'>
@@ -66,9 +67,12 @@ export const Unsub = () => (
                         <form action="https://vault-erp.us17.list-manage.com/unsubscribe/post" method="POST">
                             <input type="hidden" name="u" value="163b0abf0016c86e534b4d375" />
                             <input type="hidden" name="id" value="0118685862" />
-                            <input type="hidden" name="EMAIL" value="*|EMAIL|*" placeholder="Email Address" />
-                            <Button style={button} href="*|UNSUB|*" type="submit">Unsubscribe</Button>
+                            <OutlookHidden>
+                                <input type="text" name="EMAIL" value="*|EMAIL|*" placeholder="Email Address" hidden />
+                            </OutlookHidden>
+                            <button type="submit" style={unsubButton}>Unsubscribe</button>
                         </form>
+                        {/* <Button style={button} href="*|UNSUB|*">Unsubscribe</Button> */}
                     </OutlookConditional>
 
                 </Section>
