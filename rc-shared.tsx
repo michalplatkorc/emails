@@ -46,6 +46,7 @@ export const headerDivider = {
     backgroundColor: "rgba(204,213,221,0.15)",
     width: 1,
     height: 40,
+    lineHeight: "40px",
     marginLeft: 20,
     marginRight: 20,
 }
@@ -57,13 +58,10 @@ export const headerTitle = {
 
 }
 
-// FIXME: need to rewrite this t use some block level element because mso is rendering extra line 
 export const divider = {
-    borderTop: "1px solid rgba(204,213,221,0.15)",
-    outline: "none",
-    margin: 0,
-    padding: 0,
-    fontSize: 0,
+    width: "100%",
+    height: 1,
+    backgroundColor: "gray",
 }
 
 export const contentContainer = {
@@ -144,4 +142,63 @@ export const footerLink = {
     lineHeight: '21px',
     color: "#FE780F",
     textDecoration: "underline"
+}
+
+
+// unsub
+
+export const unsubTitle = {
+    ...subtitle,
+    marginTop: 27,
+    marginBottom: 12
+}
+
+export const unsubTitle2 = {
+    ...subtitle2,
+    marginTop: 0,
+    marginBottom: 31
+}
+
+export const unsubCaption = {
+    ...unsubTitle2,
+    fontSize: 15,
+    lineHeight: "19px",
+    marginBottom: 16,
+}
+
+// const radioGroupStyles = "flex items-center gap-[18px] mb-[18px]";
+export const radioGroup = {
+    marginBottom: 18,
+}
+
+// const radioStyles = "mb-[18px] w-[18px] h-[18px] m-0 relative appearance-none outline outline-2 outline-white20 rounded-full";
+export const radio = {
+    marginBottom: 18,
+    width: 18,
+    height: 18,
+    margin: 0,
+    padding: 0,
+    position: "relative" as const,
+    appearance: "none" as const,
+    outline: "2px solid rgba(204,213,221,0.20)",
+    borderRadius: "100%",
+    verticalAlign: "top" as const,
+}
+export const radioLabel = {
+    fontFamily: mainFontFamily,
+    marginLeft: 12,
+    fontSize: 15,
+    textAlign: "left" as const,
+}
+// style="bg-transparent border-2 border-white20 w-full h-[88px] font-main px-auto text-white resize-none box-border"
+export const textarea = {
+    fontFamily: mainFontFamily,
+    backgroundColor: "transparent",
+    border: "2px solid rgba(204,213,221,0.20)",
+    height: 88,
+    padding: "0 auto",
+    color: "white",
+    resize: "none" as const,
+    boxSizing: "border-box" as const,
+    width: "100%"
 }

@@ -29,7 +29,10 @@ export const OptIn = () => (
                         <Text style={headerTitle}>Newsletter</Text>
                     </Column>
                 </Row>
-                <Hr style={divider} />
+
+                <Row>
+                    <Column style={divider}></Column>
+                </Row>
 
                 <Section style={contentContainer}>
                     <OutlookConditional
@@ -63,7 +66,9 @@ export const OptIn = () => (
                     </OutlookConditional>
                 </Section>
 
-                <Hr style={divider} />
+                <Row>
+                    <Column style={divider}></Column>
+                </Row>
 
                 <Row style={footer}>
                     <Column>
